@@ -1,6 +1,5 @@
 services = [
-  'sway-session.target',
-  'swayidle.service'
+  'sway-session.target'
 ]
 
 install_data(services, install_dir: 'lib/systemd/user')
