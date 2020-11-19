@@ -30,7 +30,7 @@ git clone https://github.com/mavjs/sway-gnome.git
 
 Create meson build directory:
 ```bash
-meson builddir
+meson --prefix /usr builddir
 ```
 
 Install the service files:
