@@ -6,9 +6,8 @@ PartOf=graphical-session.target
 [Service]
 Type=simple
 ExecStart=/usr/bin/swayidle -w \
-exec swayidle -w \
-         lock 'swaymsg "output * dpms off"' \
-         resume 'swaymsg "output * dpms on"'
+	    timeout 300 'if pgrep swaylock; then swaymsg "output * dpms off"; fi' \
+		resume 'swaymsg "output * dpms on"'
 
 [Install]
 WantedBy=sway-session.target
