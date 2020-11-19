@@ -4,3 +4,4 @@ project('sway-gnome',
 )
 
 subdir('systemd')
+subdir('sway')
